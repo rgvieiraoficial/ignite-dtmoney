@@ -35,6 +35,14 @@ createServer({
           type: 'withdraw',
           category: 'Casa',
           createdAt: new Date('2023-05-10 10:00:00')
+        },
+        {
+          id: 4,
+          title: 'Corrida 99',
+          amount: 13.50,
+          type: 'withdraw',
+          category: 'Transporte',
+          createdAt: new Date('2023-05-10 10:00:00')
         }
       ]
     });

@@ -25,7 +25,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 
     const data = {
       title,
-      value,
+      value: Number(value),
       type,
       category
     };
