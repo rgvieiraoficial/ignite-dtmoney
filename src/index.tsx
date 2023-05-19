@@ -9,6 +9,37 @@ createServer({
     transaction: Model
   },
 
+  seeds(server) {
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: 'Desenvolvimento de Website',
+          amount: 2500,
+          type: 'deposit',
+          category: 'Outras receitas',
+          createdAt: new Date('2023-05-05 10:00:00')
+        },
+        {
+          id: 2,
+          title: 'Compra Supermecado Oliveira',
+          amount: 300,
+          type: 'withdraw',
+          category: 'Mercado',
+          createdAt: new Date('2023-05-07 10:00:00')
+        },
+        {
+          id: 3,
+          title: 'Aluguel',
+          amount: 850,
+          type: 'withdraw',
+          category: 'Casa',
+          createdAt: new Date('2023-05-10 10:00:00')
+        }
+      ]
+    });
+  },
+
   routes() {
     this.namespace = 'api';
 
